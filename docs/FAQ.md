@@ -5,7 +5,7 @@ No, the “simplicity” refers to its foundational design and formal semantics,
 
 - Bitcoin Script is deliberately limited; Simplicity is finitarily complete → it can program any finite computation.
 
-- Complex off-chain (even Turing-complete) computations can be verified on-chain with Simplicity.
+- Complex off-chain (even Turing-complete) computations can be verified on-chain with Simplicity. 
 
 
 ### Is Simplicity Turing-complete like EVM?
