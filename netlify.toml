@@ -1,5 +1,5 @@
 [build]
-command = "pip install -r requirements.txt && python -m mkdocs build -f simplicity-lang/mkdocs.yml -d ../site"
+command = "pip install -r requirements.txt && python -m mkdocs build"
 publish = "site"
 
 [build.environment]
