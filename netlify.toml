@@ -1,0 +1,5 @@
+# netlify.toml
+[build]
+environment = { PYTHON_VERSION = "3.13.3"
+command = "mkdocs build"
+publish = "site/"
