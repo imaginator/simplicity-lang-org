@@ -1,0 +1,55 @@
+{
+  "name": "Simplicity Lang Documentation",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  
+  // Features to add to the dev container
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "files.associations": {
+          "*.md": "markdown"
+        },
+        "markdown.preview.breaks": true,
+        "markdown.preview.linkify": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-python.black-formatter",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "bierner.markdown-mermaid",
+        "bierner.markdown-preview-github-styles"
+      ]
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally
+  "forwardPorts": [8000],
+
+  // Use 'postCreateCommand' to run commands after the container is created
+  "postCreateCommand": "pip install -r .devcontainer/requirements.txt",
+
+  // Configure terminal
+  "remoteUser": "vscode",
+  
+  // Mount the workspace
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+
+  // Set environment variables
+  "remoteEnv": {
+    "PYTHONPATH": "/workspace"
+  }
+}

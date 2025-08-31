@@ -1,0 +1,189 @@
+site_name: Simplicity
+site_url: https://simplicity-lang.org
+plugins:
+  - search
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  logo: assets/logo-symbol.svg
+  features:
+    - content.action.edit
+    - navigation.footer
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black # fallback, overridden by CSS
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+markdown_extensions:
+  - attr_list:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite:
+  - pymdownx.snippets:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: youtube
+          class: youtube
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition:
+  - pymdownx.details:
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://youtube.com/@blockstreamresearch
+    - icon: simple/telegram
+      link: https://t.me/simplicity_lang
+    - icon: fontawesome/brands/github
+      link: https://github.com/BlockstreamResearch/simplicity
+      # rust link
+    - icon: fontawesome/brands/rust
+      link: https://crates.io/crates/simplicity
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+
+
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+copyright: Copyright &copy; 2025 James Willett
+
+repo_url: https://github.com/BlockstreamResearch/simplicity
+edit_uri: edit/main/docs/
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: getting-started.md
+      - Creating your site: creating-your-site.md
+      - Publishing your site: publishing-your-site.md
+      - Customization: customization.md
+      - Conventions: conventions.md
+      - Browser support: browser-support.md
+      - Enterprise feedback: enterprise-support.md
+      - Philosophy: philosophy.md
+      - Alternatives: alternatives.md
+      - License: license.md
+      - Tutorials:
+          - tutorials/index.md
+          - "Blogs":
+              - tutorials/blogs/basic.md
+              - tutorials/blogs/navigation.md
+              - tutorials/blogs/engage.md
+          - "Social cards":
+              - tutorials/social/basic.md
+              - tutorials/social/custom.md
+      - Changelog:
+          - changelog/index.md
+          - How to upgrade: upgrade.md
+  - Setup:
+      - setup/index.md
+      - Changing the colors: setup/changing-the-colors.md
+      - Changing the fonts: setup/changing-the-fonts.md
+      - Changing the language: setup/changing-the-language.md
+      - Changing the logo and icons: setup/changing-the-logo-and-icons.md
+      - Ensuring data privacy: setup/ensuring-data-privacy.md
+      - Setting up navigation: setup/setting-up-navigation.md
+      - Setting up site search: setup/setting-up-site-search.md
+      - Setting up site analytics: setup/setting-up-site-analytics.md
+      - Setting up social cards: setup/setting-up-social-cards.md
+      - Setting up a blog: setup/setting-up-a-blog.md
+      - Setting up tags: setup/setting-up-tags.md
+      - Setting up versioning: setup/setting-up-versioning.md
+      - Setting up the header: setup/setting-up-the-header.md
+      - Setting up the footer: setup/setting-up-the-footer.md
+      - Adding a git repository: setup/adding-a-git-repository.md
+      - Adding a comment system: setup/adding-a-comment-system.md
+      - Building an optimized site: setup/building-an-optimized-site.md
+      - Building for offline usage: setup/building-for-offline-usage.md
+      - Extensions:
+          - setup/extensions/index.md
+          - Python Markdown: setup/extensions/python-markdown.md
+          - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
+  - Plugins:
+      - plugins/index.md
+      - Blog: plugins/blog.md
+      - Group: plugins/group.md
+      - Info: plugins/info.md
+      - Meta: plugins/meta.md
+      - Offline: plugins/offline.md
+      - Optimize: plugins/optimize.md
+      - Privacy: plugins/privacy.md
+      - Projects: plugins/projects.md
+      - Search: plugins/search.md
+      - Social: plugins/social.md
+      - Tags: plugins/tags.md
+      - Typeset: plugins/typeset.md
+      - Requirements:
+          - Image processing: plugins/requirements/image-processing.md
+          - Caching: plugins/requirements/caching.md
+  - Reference:
+      - reference/index.md
+      - Admonitions: reference/admonitions.md
+      - Annotations: reference/annotations.md
+      - Buttons: reference/buttons.md
+      - Code blocks: reference/code-blocks.md
+      - Content tabs: reference/content-tabs.md
+      - Data tables: reference/data-tables.md
+      - Diagrams: reference/diagrams.md
+      - Footnotes: reference/footnotes.md
+      - Formatting: reference/formatting.md
+      - Grids: reference/grids.md
+      - Icons, Emojis: reference/icons-emojis.md
+      - Images: reference/images.md
+      - Lists: reference/lists.md
+      - Math: reference/math.md
+      - Tooltips: reference/tooltips.md
+  - Insiders:
+      - insiders/index.md
+      - Why sponsor us: insiders/why-sponsor-us.md
+      - What's in it for you: insiders/benefits.md
+      - Who is sponsoring: insiders/our-sponsors.md
+      - Sponsoring tiers: insiders/sponsoring-tiers.md
+      - How to sponsor: insiders/how-to-sponsor.md
