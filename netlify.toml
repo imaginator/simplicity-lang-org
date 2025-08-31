@@ -1,6 +1,4 @@
 [build]
 command = "pip install -r requirements.txt && python -m mkdocs build"
 publish = "site"
-
-[build.environment]
-PYTHON_VERSION = "3.11"
+environment = { PYTHON_VERSION = "3.13.3" }
