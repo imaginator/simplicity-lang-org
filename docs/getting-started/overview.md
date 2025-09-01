@@ -1,6 +1,6 @@
 ## Quick Start Recommendations
 
-For **beginners and experimentation**, we recommend starting with the [**WebIDE**](https://github.com/BlockstreamResearch/simplicity-webide) - it runs directly in your browser and requires no setup.
+For **beginners and experimentation**, we recommend starting with the [**WebIDE**](https://ide.simplicity-lang.org) - it runs directly in your browser and requires no setup.
 
 For **script development**, start with [SimplicityHL](https://github.com/BlockstreamResearch/SimplicityHL) - the Rust-like high-level language that compiles down to core Simplicity.
 
@@ -9,8 +9,8 @@ For **script development**, start with [SimplicityHL](https://github.com/Blockst
 
 | Language/Tool | Purpose |
 |---------------|---------|
-| :material-lambda: [**Simplicity Haskell Implementation**](https://github.com/BlockstreamResearch/simplicity/tree/master/Haskell) | The **reference implementation** and also generates code for Rust and C implementations |
-| :material-microscope: [**Coq (Rocq)**](https://github.com/BlockstreamResearch/simplicity/tree/master/Coq) | The **formal implementation** |
+| :material-lambda: [**Haskell Simplicity**](https://github.com/BlockstreamResearch/simplicity/tree/master/Haskell) | The **reference implementation** and also used to generate code for Rust and C implementations |
+| :material-microscope: [**Coq/Rocq Simplicity Proofs**](https://github.com/BlockstreamResearch/simplicity/tree/master/Coq) | The **formal implementation** |
 | :material-flash: [**C**](https://github.com/BlockstreamResearch/simplicity/tree/master/C) | The **consensus implementation** |
 | :simple-rust: [**Rust Simplicity**](https://github.com/BlockstreamResearch/rust-simplicity) | The **practical implementation** in the form of a Rust library. |
 | :simple-rust: [**SimplicityHL**](https://github.com/BlockstreamResearch/SimplicityHL) | Rust-like high-level language that compiles down to Simplicity. Recommended starting point |

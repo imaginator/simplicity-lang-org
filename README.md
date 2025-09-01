@@ -14,3 +14,5 @@ mkdocs serve
 # Build for production
 python -m mkdocs build
 ```
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/74ba1edb-24ca-412d-ac32-4330d7435e43/deploy-status)](https://app.netlify.com/projects/simplicity-docs/deploys)
