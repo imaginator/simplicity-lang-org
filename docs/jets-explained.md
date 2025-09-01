@@ -40,6 +40,7 @@ The Jet's behavior is described with mathematical precision in **Rocq/Coq**.
 This specification is the “source of truth” against which all implementations (C, Haskell, Rust) are verified.
 
 ### 3. Haskell Implementation
+
 A reference implementation is written in **Haskell**, a functional programming language.
 
 This version is easier to reason about and serves as an intermediate step before low-level coding.

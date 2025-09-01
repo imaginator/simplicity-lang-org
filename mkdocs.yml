@@ -12,6 +12,22 @@ theme:
   features:
     - content.action.edit
     - navigation.footer
+    - content.code.annotate
+    - navigation.tabs # Top-level sections as tabs
+    - navigation.tabs.sticky # Sticky navigation tabs
+    - navigation.sections # Section headers in sidebar
+    - navigation.expand # Expand subsections by default
+    - navigation.indexes # Section index pages
+    - navigation.top # Back to top button
+    - navigation.tracking # Anchor tracking
+    - search.highlight # Highlight search terms
+    - search.share # Share search link
+    - search.suggest # Search suggestions
+    - content.code.copy # Copy code button
+    - content.code.annotate # Code annotations
+    - content.tabs.link # Link content tabs
+    - toc.follow # Follow table of contents
+    - toc.integrate # Integrate TOC in sidebar
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -96,14 +112,17 @@ edit_uri: edit/main/docs/
 
 extra_css:
   - stylesheets/extra.css
-# nav:
-#   - Home: index.md
-#   - Getting started:
-#       - Installation: getting-started.md
-#       - Creating your site: creating-your-site.md
-#       - Publishing your site: publishing-your-site.md
-#       - Customization: customization.md
-#       - Conventions: conventions.md
+nav:
+  - Home: index.md
+  - Getting started:
+      - Overview: getting-started/overview.md
+      - Haskell: getting-started/haskell.md
+      - Rust: getting-started/rust.md
+      - SimplicityHL: getting-started/simplicityhl.md
+  - Documentation:
+      - Simplicity Jets: documentation/jets-explained.md
+  - Roadmap: roadmap.md
+  - FAQ: faq.md
 #       - Browser support: browser-support.md
 #       - Enterprise feedback: enterprise-support.md
 #       - Philosophy: philosophy.md
