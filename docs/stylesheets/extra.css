@@ -2,3 +2,7 @@
 .md-header__source {
     display: none !important;
 }
+
+.md-source {
+    display: none !important;
+}

@@ -1,13 +1,28 @@
-Example Timeline
+# Simplicity Roadmap
 
-!!! note "We are working on updating this"
+The primary objective for the current development cycle is to prepare Simplicity for execution on a Bitcoin test network. Achieving this objective requires finalising the set of jets, establishing a complete cost model, and implementing state storage for advanced contract functionality.
 
-    Test
-    test
-    test 1 2 3
+### Bitcoin Integration
 
-??? info "We are working on updating this"
+Work will continue towards producing a signet-mergeable integration branch of bitcoin-core containing Simplicity. Key tasks include:
 
-    Test
-    test
-    test 1 2 3
+* Porting `libsimplicity` into the integration branch.
+* Ensuring all jets are fully implemented and functioning.
+* Assigning execution costs to each jet.
+
+### State Storage in Simplicity
+
+Implementation of UTXO-committed state storage is planned to support advanced contract use cases, including covenants and vaults. This requires:
+
+* Defining the state storage API.
+* Producing reference examples demonstrating stateful contracts.
+* Documenting usage patterns for developers.
+
+### Path to Testnet Deployment
+
+The following sequence outlines the progression towards a Bitcoin testnet release:
+
+1. Completion of jet implementation and cost assignments.
+2. Availability of the signet-mergeable integration branch.
+3. Implementation of state storage, enabling contracts such as covenants and vaults.
+4. Deployment of Simplicity on Bitcoin testnet.

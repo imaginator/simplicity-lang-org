@@ -1,15 +1,13 @@
 ---
-title: "Simplicity Programming Language"
+title: "A typed functional smart contract language for bitcoin-like blockchains."
 description: "A typed, combinator-based, functional smart contract language without loops or recursion, designed for Bitcoin-like blockchains."
 hide:
   - navigation
   - toc
-  - title
 ---
 
-## A typed functional smart contract language designed for Bitcoin
 
-Simplicity is a low-level, typed, functional, native smart contract language designed to improve upon Bitcoin Script while maintaining its security model and simplicity.
+Simplicity is a typed, combinator-based, functional smart contract language without loops or recursion, designed for Bitcoin-like blockchains.
 
 
 ## Key Features
@@ -18,10 +16,8 @@ Simplicity is a low-level, typed, functional, native smart contract language des
 
 Simplicity allows developers to write contracts that go beyond the limitations of Bitcoin Script. Complex financial workflows, conditional payments, and tokenized assets can all be encoded efficiently and safely.
 
-
 ### Predictable Resource Usage
 Every Simplicity contract has clearly bounded computational costs. This ensures contracts run reliably on-chain without unexpected fees or execution failures.
-
 
 ### Formally Specified
 Simplicity smart contracts can be formally specified using mathematical proof assistants, enabling rigorous verification of their behavior. This ensures that contracts behave exactly as intended, significantly reducing the risk of critical bugs and security vulnerabilities.

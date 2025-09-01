@@ -68,5 +68,5 @@ This proves that the optimized C implementation is semantically identical to the
 Once fully verified and benchmarked, the Jet is integrated into the **core Simplicity library** and considered for standardization, making it available for general use in Liquid and Bitcoin scripts.
 
 ### 8. Deployment
-Newer Jets are deployed to a **testnet** (possibly *mutinynet*) for real-world testing.
+Newer Jets are deployed to a Bitcoin **testnet** for real-world testing.
 

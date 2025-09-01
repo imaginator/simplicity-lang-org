@@ -4,6 +4,7 @@ plugins:
   - search
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Open Sans
     code: Source Code Pro
@@ -127,7 +128,6 @@ repo_name: ""  # Hides the GitHub link/icon from title bar while keeping edit fu
 edit_uri: edit/main/docs/
 
 nav:
-  - Home: index.md
   - Getting started:
       - Overview: getting-started/overview.md
       - Haskell: getting-started/haskell.md
@@ -139,15 +139,18 @@ nav:
       - Simplicity for EVM developers: documentation/simplicity-for-evm-developers.md
       - How Simplicity Works: documentation/how-simplicity-works.md
       - Simplicity Compared: documentation/simplicity-compared.md
-      - SimplicityHL Reference:
-          - Overview: documentation/simplicityhl/overview.md
-          - Types and Values: documentation/simplicityhl/type.md
-          - Type Aliases: documentation/simplicityhl/type_alias.md
-          - Type Casting: documentation/simplicityhl/type_casting.md
-          - Let Statements: documentation/simplicityhl/let_statement.md
-          - Match Expression: documentation/simplicityhl/match_expression.md
-          - Functions: documentation/simplicityhl/function.md
-          - Programs: documentation/simplicityhl/program.md
-  - Roadmap: roadmap.md
-  - FAQ: faq.md
-  - Contribute: contribute.md
+#      - Simplicity in Liquid: documentation/simplicity-in-liquid.md
+#      - Simplicity Unchained: documentation/simplicity-unchained.md
+  - SimplicityHL Reference:
+      - Overview: documentation/simplicityhl/overview.md
+      - Types and Values: documentation/simplicityhl/type.md
+      - Type Aliases: documentation/simplicityhl/type_alias.md
+      - Type Casting: documentation/simplicityhl/type_casting.md
+      - Let Statements: documentation/simplicityhl/let_statement.md
+      - Match Expression: documentation/simplicityhl/match_expression.md
+      - Functions: documentation/simplicityhl/function.md
+      - Programs: documentation/simplicityhl/program.md
+  - Resources:
+    - Roadmap: roadmap.md
+    - FAQ: faq.md
+    - Contribute: contribute.md
