@@ -7,7 +7,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/logo-symbol.svg
   logo: assets/logo-symbol.svg
   features:
     - content.action.edit
@@ -120,7 +120,10 @@ nav:
       - Rust: getting-started/rust.md
       - SimplicityHL: getting-started/simplicityhl.md
   - Documentation:
-      - Simplicity Jets: documentation/jets-explained.md
+      - How Simplicity Works: How-Simplicity-Works.md
+      - Simplicity Jets: jets-explained.md
+      - Simplicity Compared: Simplicity-Compared.md
+      - For EVM Developers: simplicity-for-evm-developers.md
   - Roadmap: roadmap.md
   - FAQ: faq.md
 #       - Browser support: browser-support.md
