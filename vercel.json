@@ -1,0 +1,6 @@
+{
+  "buildCommand": "./build.sh",
+  "outputDirectory": "site",
+  "installCommand": "python3 -m pip install --upgrade pip",
+  "framework": null
+}
