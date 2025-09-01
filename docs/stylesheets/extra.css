@@ -1,0 +1,4 @@
+/* Hide the GitHub repository link/icon in the header */
+.md-header__source {
+    display: none !important;
+}

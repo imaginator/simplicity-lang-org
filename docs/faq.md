@@ -58,7 +58,7 @@ The future vision is that there are multiple high-level languages which all comp
 
 ### What are Jets, and how do they make programs efficient?
 
-A [Simplicity jet](jets-explained.md) is a pre-defined, optimized function that replaces an equivalent Simplicity expression to speed up execution without changing its meaning.
+A [Simplicity jet](documentation/jets-explained.md) is a pre-defined, optimized function that replaces an equivalent Simplicity expression to speed up execution without changing its meaning.
 
 Benefits:
 
