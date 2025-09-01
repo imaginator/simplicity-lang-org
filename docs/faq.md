@@ -1,12 +1,11 @@
 
-### Simplicity is so simple it fits on a T-shirt. Does that mean it's as limited as Bitcoin Script?
+### Simplicity is so simple it fits on a [T-shirt](https://store.blockstream.com/products/simplicity-t-shirt). Does that mean it's as limited as Bitcoin Script?
 
-No, the “simplicity” refers to its foundational design and formal semantics, not its expressiveness.
+No, the "simplicity" refers to its foundational design and formal semantics, not its expressiveness.
 
 - Bitcoin Script is deliberately limited; Simplicity is finitarily complete → it can program any finite computation.
 
-- Complex off-chain (even Turing-complete) computations can be verified on-chain with Simplicity. 
-
+- Complex off-chain (even Turing-complete) computations can be verified on-chain with Simplicity.
 
 ### Is Simplicity Turing-complete like EVM?
 
@@ -20,19 +19,21 @@ No, and that’s a feature!
 
 ### How does Simplicity handle state? Does it have global state like Ethereum?
 
-No global state. Simplicity is purely functional: each program is a function mapping inputs → outputs.
+Simplicity has no global state. It is a purely functional language: each program is just a function mapping inputs → outputs.
 
-Operates in the Bitcoin UTXO model:
+Contracts run within the Bitcoin UTXO model:
 
-  - Contracts = small programs guarding coins.
+1. Contracts are small programs attached to UTXOs that guard the associated coins.
 
-  - Spending = providing witness data so the contract evaluates to true.
+2. Spending a UTXO means providing witness data so the contract evaluates to true.
 
+3. State is carried forward explicitly by committing data into the next UTXO.
 
+This design avoids shared mutable state (as in Ethereum). Instead, every transition is localized: a UTXO is consumed, and the updated state is re-committed into the new UTXO.
 
 ### How do I prove my Simplicity contract is correct?
 
-Formal verification happens in [Rocq](https://rocq-prover.org/), not directly in Simplicity.
+Formal verification happens in [Coq/Rocq](https://rocq-prover.org/), not directly in Simplicity.
 
 Process:
 
@@ -40,8 +41,7 @@ Process:
 
   2. You prove correctness properties (safety, termination, resource use).
 
-  3. Proofs give guarantees before deployment — no chance of “oops, can’t patch.”
-
+  3. Proofs give guarantees before deployment.
 
 ### Simplicity is low-level. Do I write contracts directly in it?
 
@@ -55,7 +55,6 @@ Not usually. There are higher-level options:
 
 The future vision is that there are multiple high-level languages which all compile down to Simplicity + proofs.
 
-
 ### What are Jets, and how do they make programs efficient?
 
 A [Simplicity jet](documentation/jets-explained.md) is a pre-defined, optimized function that replaces an equivalent Simplicity expression to speed up execution without changing its meaning.
@@ -68,11 +67,20 @@ Benefits:
 
   - Keeps execution fast, compact, and analyzable.
 
-In the FAQ we need to stress that Simplicity is an enhancement rather than replacement for (move away from all or nothing thinking about Simplicity).
-Turn this into a question (From Bitcoin++ interview):
-Russell: In a taproot leaf level you can mix and match Bitcoin Script with Simplicity script.
-Nifty: With simplicity you get the best of both worlds.
-Russell: Yes, we are not competing with bitcoin script, we are collaborating with bitcoin script.
-Question: Understand how they would track a futures contract with different strike prices - what’s my position/how exposed am I? 
-Question: How to track traction IDs?
-More to come…
+### How does Simplicity exist alongside Bitcoin script?
+
+With Taproot’s versioned leaves, a single Taproot output can include both standard Script/Miniscript leaves and a Simplicity leaf. This allows mixing policies: simple paths can remain in Script while advanced paths use Simplicity, preserving flexibility and privacy under one Taptree.
+
+### How do I track the value of a Simplicity contract with partial payouts when different strike prices are being matched?
+
+Simplicity contracts operate on UTXO-committed state. Each contract output carries forward a table of strikes together with their remaining notionals.
+
+At every settlement event, the contract:
+
+1. Reads the current reference price.
+
+2. Applies partial payouts to any strikes that are matched.
+
+3. Updates the strike table by reducing the notional amounts that have been settled.
+
+The value of the contract at any point is given by the piecewise payoff function, evaluated against the latest UTXO state. By inspecting the most recent UTXO, participants can determine both their current position and their outstanding exposure.
