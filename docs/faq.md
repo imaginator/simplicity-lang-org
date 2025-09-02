@@ -83,4 +83,4 @@ At every settlement event, the contract:
 
 3. Updates the strike table by reducing the notional amounts that have been settled.
 
-The value of the contract at any point is given by the piecewise payoff function, evaluated against the latest UTXO state. By inspecting the most recent UTXO, participants can determine both their current position and their outstanding exposure.
+The value of the contract at any point is given by the piecewise payoff function, evaluated against the latest UTXO state. By inspecting the most recent UTXO, participants can determine both their current position and their outstanding exposure. (see also: Bitcoin Optech [comment from AJ Towns](https://bitcoinops.org/en/newsletters/2024/11/29/#flexible-coin-earmarks) on flexible coin earmarks)

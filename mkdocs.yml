@@ -5,9 +5,6 @@ plugins:
 theme:
   name: material
   custom_dir: overrides
-  font:
-    text: Open Sans
-    code: Source Code Pro
   favicon: assets/logo-symbol.svg
   logo: assets/logo-symbol.svg
   features:
@@ -130,9 +127,9 @@ edit_uri: edit/main/docs/
 nav:
   - Getting started:
       - Overview: getting-started/overview.md
-      - Haskell: getting-started/haskell.md
-      - Rust: getting-started/rust.md
       - SimplicityHL: getting-started/simplicityhl.md
+      - Rust: getting-started/rust.md
+      - Haskell: getting-started/haskell.md
   - Documentation: 
       - Overview: documentation/overview.md
       - Jets Explained: documentation/jets-explained.md
@@ -150,6 +147,15 @@ nav:
       - Match Expression: documentation/simplicityhl/match_expression.md
       - Functions: documentation/simplicityhl/function.md
       - Programs: documentation/simplicityhl/program.md
+  - Use Cases:
+      - Overview: use-cases/overview.md
+      - Simplicty Unchained: use-cases/unchained.md
+      - Financial Contracts: use-cases/financial-contracts.md
+      - Discreet Log Contracts: use-cases/discreet-log-contracts.md
+      - Cross-Chain Atomic Swaps: use-cases/cross-chain-atomic-swaps.md
+      - Crowdfunding Contracts: use-cases/crowdfunding.md
+      - Vaults: use-cases/vaults.md
+      - Insurance Contracts: use-cases/insurance-contracts.md
   - Resources:
     - Roadmap: roadmap.md
     - FAQ: faq.md
