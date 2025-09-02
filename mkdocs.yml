@@ -4,7 +4,6 @@ plugins:
   - search
 theme:
   name: material
-  custom_dir: overrides
   favicon: assets/logo-symbol.svg
   logo: assets/logo-symbol.svg
   features:
