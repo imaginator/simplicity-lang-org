@@ -1,16 +1,16 @@
 # Simplicity for EVM Developers
 
+Michael from [Boltz](https://boltz.exchange/) explaining EVM and Liquid differences
+
 <div class="video-wrapper">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/8Q1JPKvp7TE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="825" height="540" src="https://www.youtube.com/embed/8Q1JPKvp7TE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Welcome, Solidity and EVM developers! You're used to a world of account-based models, Turing-complete languages, and sophisticated state management.
 
 Simplicity, a new programming language from Blockstream Research, offers a fundamentally different approach, bringing high-assurance smart contracting to Bitcoin-style UTXO-based blockchains like Liquid.
 
-
 While it operates on different principles, Simplicity aims to provide expressiveness **without sacrificing reliability**. Its design allows you to build sophisticated smart contracts and be confident in their outcomes.
-
 
 This guide will help you navigate the key conceptual shifts as you transition into the Simplicity world.
 
@@ -61,9 +61,12 @@ You do not perform formal proofs in Haskell or Simplicity directly. Simplicity's
 
 The proof process works as follows:
 
-* Simplicity's semantics have a precise mathematical model defined in Coq, which allows for rigorous proofs of correctness.  
+* Simplicity's semantics have a precise mathematical model defined in Coq, which allows for rigorous proofs of correctness.
+
 * You can directly prove correctness properties about your specific smart contract written in Simplicity using formal methods within the Coq framework. This means you can formally verify every step.  
+
 * This approach empowers users to create formal proofs of correctness for their smart contracts before deployment, addressing the immutability problem of blockchain smart contracts where mistakes cannot be corrected once deployed. For instance, you can prove that coins cannot be moved without a specific signature, or that a program won't exceed a memory threshold.  
+
 * The Haskell implementation is primarily used for constructing and prototyping Simplicity programs. These programs are then the *subject* of formal proofs conducted in Coq. There is no formalized connection between the Haskell library and Simplicity's formal semantics in Coq, so the Haskell library is intended for experimental development, not production where formal proofs are critical.
 
 ### Simplicity is a low-level language. Will I be writing contracts directly in it, or is there a higher-level abstraction?
@@ -72,9 +75,12 @@ While Simplicity is an extremely low-level language, akin to assembler, you are 
 
 Higher-level languages and tools are available:
 
-* **SimplicityHL**: This is a developer-friendly "front-end" language that compiles down to Simplicity assembly. It has a syntax similar to Rust, abstracting away some of Simplicity's functional programming details to make it more accessible.   
-* **SimplicityHL web-IDE:** You can start experimenting with Simfony using the web IDE, which includes example programs.   
+* **SimplicityHL**: This is a developer-friendly "front-end" language that compiles down to Simplicity assembly. It has a syntax similar to Rust, abstracting away some of Simplicity's functional programming details to make it more accessible.
+
+* **SimplicityHL web-IDE:** You can start experimenting with Simfony using the web IDE, which includes example programs.
+
 * **Haskell Implementation**: This provides a way to construct Simplicity programs in a tagless-final style, which transparently handles sharing of subexpressions. The [`Haskell-Examples`](https://github.com/BlockstreamResearch/simplicity/tree/master/Haskell-Examples) folder in the Simplicity repository contains various Simplicity expressions written in Haskell.  
+
 * **Future Higher-Level Languages**: The ultimate vision is for users to write contracts in various higher-level languages that then compile down to Simplicity code alongside proofs of their correct operation.
 
 ### What are 'Jets' and how do they make complex operations efficient?
@@ -82,17 +88,23 @@ Higher-level languages and tools are available:
 **Jets are a key concept for efficiency and extensibility in Simplicity**.
 
 * A jet is a single combinator that replaces a larger Simplicity expression, known as its "specification".  
+
 * While the core Simplicity language is concise, complex programs built solely from its basic combinators could be kilobytes of code and take minutes to execute.  
+
 * Jets solve this by allowing the Simplicity interpreter to evaluate the jet either by evaluating its Simplicity specification or by using optimized machine code (often C implementations) that has the same effect.  
+
 * Crucially, these optimised implementations are formally proven equivalent to their Simplicity specifications in Coq. For example, the SHA-256 compression function and libsecp256k1 elliptic curve operations have been reimplemented and formally verified in Simplicity.  
+
 * This approach opens a clear path for introducing new features and optimisations without constant soft forks. Simplicity's comprehensive "catalog of jets" includes cryptographic functions, arithmetic operations, and Bitcoin-related operations like timelocks.
 
 ### How does Simplicity handle inputs and external data, like signatures or transaction details?
 
 Simplicity programs interact with data through explicit mechanisms:
 
-* **Witness Combinators**: The `witness` combinator returns a value provided at evaluation time, serving as inputs to Simplicity programs. These are analogous to Bitcoin Script's input stack in its `sigScript` or SegWit's witness. Type inference ensures witness data only contains nominally useful data and prevents padding with unused bits.   
+* **Witness Combinators**: The `witness` combinator returns a value provided at evaluation time, serving as inputs to Simplicity programs. These are analogous to Bitcoin Script's input stack in its `sigScript` or SegWit's witness. Type inference ensures witness data only contains nominally useful data and prevents padding with unused bits.
+
 * **Blockchain Primitives (Introspection)**: Simplicity includes primitive expressions that allow programs to read data from the transaction context where they are executed. This includes details about the transaction's inputs and outputs, locktime, and the commitment Merkle root of the program itself.  
+
 * **Assertions**: The `assert` and `fail` expressions allow programs to halt execution if certain conditions are not met. This is similar to Bitcoin Script's `OP_VERIFY` or Ethereum's `STOP` opcode, validating checks like digital signature verification.
 
 ### How does Simplicity's program structure differ from Solidity, especially regarding privacy and efficiency?
@@ -100,24 +112,27 @@ Simplicity programs interact with data through explicit mechanisms:
 Simplicity's structure is deeply rooted in functional programming and designed for efficiency and privacy:
 
 * **Combinator-Based**: Simplicity expressions are constructed from a small set of basic combinators (like `comp`, `pair`, `witness`, `iden`, `unit`, `injl`, `injr`, `take`, `drop`, `case`) which build up expressions from smaller ones.  
+
 * **Merkelized Abstract Syntax Trees (MASTs)**: Simplicity natively integrates MASTs. This means programs are arranged into trees, and only the portions necessary for redemption are revealed, pruning away unused parts. This increases privacy and decreases block space requirements.  
+
 * Simplicity enables transparent sharing of identical subexpressions within a program. This allows complex logic, such as bounded loops, to be expressed more compactly. Even though shared subexpressions can make a program appear smaller than the work it performs, Simplicity’s static analysis ensures that all programs have a known upper bound on resource usage, maintaining predictable and safe execution limits.
 
-
-  
 ### What's the type system like in Simplicity? Does it have rich data structures?
 
 Simplicity's type system is fundamental and rigorously defined:
 
 * **Strictly Typed**: Unlike Bitcoin’s existing scripting language, Simplicity enforces strict typing rules, which helps eliminate certain classes of bugs and vulnerabilities.  
-* **Simple Type Forms**: All types in Simplicity are combinations of just three basic forms:  
-  * **Unit Type (1)**: Defines exactly one possible value, representing an "empty output"  
-  * **Product Type (A × B)**: Composes a pair of types using an "and" operation, similar to tuples or records  
-  * **Sum Type (A \+ B)**: Combines two types in an "or" operation, similar to `Either` types in functional languages or tagged unions.  
-* **Finite Types**: All types in Simplicity are finite. This means infinite or recursive types are not possible, ensuring termination and enabling rigorous analysis and verification.  
-* **No Function Types or Named Variables**: Simplicity has neither function types nor higher-order functions. It also has no named variables, relying on combinators to avoid binders and environments for bound variables.  
+
+* **Simple Type Forms**: All types in Simplicity are combinations of just three basic forms:
+  * **Unit Type (1)**: Defines exactly one possible value, representing an "empty output"
+  * **Product Type (A × B)**: Composes a pair of types using an "and" operation, similar to tuples or records
+  * **Sum Type (A + B)**: Combines two types in an "or" operation, similar to `Either` types in functional languages or tagged unions.
+* **Finite Types**: All types in Simplicity are finite. This means infinite or recursive types are not possible, ensuring termination and enabling rigorous analysis and verification.
+
+* **No Function Types or Named Variables**: Simplicity has neither function types nor higher-order functions. It also has no named variables, relying on combinators to avoid binders and environments for bound variables.
+
 * **Type Inference:** Simplicity uses first-order unification to perform type inference on Simplicity expressions, replacing any remaining type variables with the unit type. Because the types of pruned branches are discarded, the inferred types may end up smaller than in the originally committed program.
-   
+
 ## Comparing Simplicity and Solidity Scripts
 
 Here's an example that shows the differences between both languages. An oracle signs a message with the current block height and the current price. The block height is compared with a minimum height to prevent the use of old data. The transaction is timelocked to the oracle height, which means that the transaction becomes valid after the oracle height.
