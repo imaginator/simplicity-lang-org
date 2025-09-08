@@ -9,28 +9,17 @@ theme:
   features:
     - announce.dismiss
     - content.action.edit
-    # - content.action.view
     - content.code.annotate
     - content.code.copy
     - content.code.select
     - content.footnote.tooltips
-    # - content.tabs.link
     - content.tooltips
-    # - header.autohide
     - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.instant.preview
-    # - navigation.path
-    # - navigation.prune
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
     - navigation.top
-    # - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
@@ -88,7 +77,7 @@ extra_css:
   - stylesheets/extra.css
 
 extra:
-  generator: false # Removes "Made with Material for MkDocs" footer text
+  generator: false
   social:
     - icon: simple/youtube
       link: https://www.youtube.com/@Blockstream/search?query=simplicity
@@ -100,6 +89,8 @@ extra:
     - icon: fontawesome/brands/rust
       link: https://crates.io/crates/simplicity
   analytics:
+    provider: google
+    property: G-CPMC9XLPYJ
     feedback:
       title: Was this page helpful?
       ratings:
@@ -115,39 +106,37 @@ extra:
 
 
             Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            using our <a href="https://github.com/BlockstreamResearch/simplicity-docs/issues/new" target="_blank" rel="noopener">feedback form</a>.
 
 copyright: Copyright &copy; 2025 Blockstream
 
 repo_url: https://github.com/BlockstreamResearch/simplicity-lang-org
-repo_name: ""  # Hides the GitHub link/icon from title bar while keeping edit functionality
+repo_name: "" # Hides the GitHub link/icon from title bar while keeping edit functionality
 edit_uri: edit/main/docs/
 
 nav:
   - Getting started:
-      - Overview: getting-started/overview.md
+      - getting-started/index.md
       - SimplicityHL: getting-started/simplicityhl.md
       - Rust: getting-started/rust.md
       - Haskell: getting-started/haskell.md
-  - Documentation: 
-      - Overview: documentation/overview.md
+  - Documentation:
+      - documentation/index.md
       - Jets Explained: documentation/jets-explained.md
       - Simplicity for EVM developers: documentation/simplicity-for-evm-developers.md
       - How Simplicity Works: documentation/how-simplicity-works.md
       - Simplicity Compared: documentation/simplicity-compared.md
-#      - Simplicity in Liquid: documentation/simplicity-in-liquid.md
-#      - Simplicity Unchained: documentation/simplicity-unchained.md
   - SimplicityHL Reference:
-      - Overview: documentation/simplicityhl/overview.md
-      - Types and Values: documentation/simplicityhl/type.md
-      - Type Aliases: documentation/simplicityhl/type_alias.md
-      - Type Casting: documentation/simplicityhl/type_casting.md
-      - Let Statements: documentation/simplicityhl/let_statement.md
-      - Match Expression: documentation/simplicityhl/match_expression.md
-      - Functions: documentation/simplicityhl/function.md
-      - Programs: documentation/simplicityhl/program.md
+      - simplicityhl-reference/index.md
+      - Types and Values: simplicityhl-reference/type.md
+      - Type Aliases: simplicityhl-reference/type_alias.md
+      - Type Casting: simplicityhl-reference/type_casting.md
+      - Let Statements: simplicityhl-reference/let_statement.md
+      - Match Expression: simplicityhl-reference/match_expression.md
+      - Functions: simplicityhl-reference/function.md
+      - Programs: simplicityhl-reference/program.md
   - Use Cases:
-      - Overview: use-cases/overview.md
+      - use-cases/index.md
       - Simplicty Unchained: use-cases/unchained.md
       - Financial Contracts: use-cases/financial-contracts.md
       - Discreet Log Contracts: use-cases/discreet-log-contracts.md
@@ -156,6 +145,6 @@ nav:
       - Vaults: use-cases/vaults.md
       - Insurance Contracts: use-cases/insurance-contracts.md
   - Resources:
-    - Roadmap: roadmap.md
-    - FAQ: faq.md
-    - Contribute: contribute.md
+      - Roadmap: resources/roadmap.md
+      - FAQ: resources/faq.md
+      - Contribute: resources/contribute.md
