@@ -25,8 +25,19 @@
   "search.followSymlinks": false,
   "stylelint.validate": ["css", "scss"],
   "typescript.tsdk": "node_modules/typescript/lib",
+  "extensions": [
+        "ms-python.python",
+        "redhat.vscode-yaml",
+        "DavidAnson.vscode-markdownlint",
+        "rvest.vs-code-prettier-eslint",
+        "Simplicity.simplicityhl",
+      ],
   "yaml.schemas": {
-    "docs/schema.json": "mkdocs.yml"
+    "https://squidfunk.github.io/mkdocs-material/schema.json": [
+      "mkdocs.yml",
+      "file:///workspaces/simplicity-lang-org/mkdocs.yml"
+    ],
+    "https://json.schemastore.org/github-workflow.json": "/.github/workflows/*"
   },
   "yaml.customTags": [
     "!ENV scalar",
