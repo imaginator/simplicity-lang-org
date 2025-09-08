@@ -138,6 +138,9 @@ nav:
       - Match Expression: simplicityhl-reference/match_expression.md
       - Functions: simplicityhl-reference/function.md
       - Programs: simplicityhl-reference/program.md
+      - Context: simplicityhl-reference/context.md
+      - Environment: simplicityhl-reference/environment.md
+      - Translation: simplicityhl-reference/translation.md
   - Use Cases:
       - use-cases/index.md
       - Simplicty Unchained: use-cases/unchained.md
