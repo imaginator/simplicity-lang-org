@@ -7,5 +7,12 @@
 			"version": "3.11"
 	  }
 	},
-	"postCreateCommand": "pip install -e . && pip install mkdocs-minify-plugin mkdocs-redirects && npm install && npm run build"
+	"postCreateCommand": "pip install -e . && pip install mkdocs-minify-plugin mkdocs-redirects && npm install && npm run build",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Simplicity.simplicityhl"
+			]
+		}
+	}
 }
