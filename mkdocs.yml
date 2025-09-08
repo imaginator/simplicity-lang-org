@@ -5,8 +5,9 @@ plugins:
   - search:
   - git-revision-date-localized:
   - git-committers:
-      repository: BlockstreamResearch/simplicity-docs
+      repository: BlockstreamResearch/simplicity-lang-org
       branch: main
+      token: !!env:GIT_COMMITTERS_TOKEN
 theme:
   name: material
   custom_dir: overrides

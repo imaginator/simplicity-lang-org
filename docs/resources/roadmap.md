@@ -14,9 +14,10 @@ Work will continue towards producing a signet-mergeable integration branch of bi
 
 Implementation of UTXO-committed state storage is planned to support advanced contract use cases, including covenants and vaults. This requires:
 
-* Defining the state storage API.
+* Defining the state storage API and on-chain commitment structure.
 * Producing reference examples demonstrating stateful contracts.
 * Documenting usage patterns for developers.
+* Implementation in SimplicityHL
 
 ### Path to Testnet Deployment
 
