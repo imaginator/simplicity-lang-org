@@ -1,12 +1,15 @@
 site_name: Simplicity
-site_url: https://new-docs.simplicity-lang.org
+site_url: https://docs.simplicity-lang.org
+site_description: A typed, functional smart contract language for Bitcoin-like blockchains. # Add this line
 plugins:
+  - search:
   - git-revision-date-localized:
   - git-committers:
       repository: BlockstreamResearch/simplicity-docs
       branch: main
 theme:
   name: material
+  custom_dir: overrides
   favicon: assets/logo-symbol.svg
   logo: assets/logo-symbol.svg
   features:
@@ -27,7 +30,6 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    # - toc.integrate
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -75,10 +77,8 @@ markdown_extensions:
   - pymdownx.details:
   - pymdownx.tabbed:
       alternate_style: true
-
 extra_css:
   - stylesheets/extra.css
-
 extra:
   generator: false
   social:
@@ -88,7 +88,6 @@ extra:
       link: https://t.me/simplicity_lang
     - icon: fontawesome/brands/github
       link: https://github.com/BlockstreamResearch/simplicity
-      # rust link
     - icon: fontawesome/brands/rust
       link: https://crates.io/crates/simplicity
   analytics:
@@ -125,9 +124,9 @@ nav:
       - Haskell: getting-started/haskell.md
   - Documentation:
       - documentation/index.md
+      - How Simplicity Works: documentation/how-simplicity-works.md
       - Jets Explained: documentation/jets-explained.md
       - Simplicity for EVM developers: documentation/simplicity-for-evm-developers.md
-      - How Simplicity Works: documentation/how-simplicity-works.md
       - Simplicity Compared: documentation/simplicity-compared.md
   - SimplicityHL Reference:
       - simplicityhl-reference/index.md

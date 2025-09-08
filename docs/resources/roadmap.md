@@ -2,7 +2,7 @@
 
 The primary objective for the current development cycle is to prepare Simplicity for execution on a Bitcoin test network. Achieving this objective requires finalising the set of jets, establishing a complete cost model, and implementing state storage for advanced contract functionality.
 
-### Bitcoin Integration
+### Bitcoin Testnet Integration
 
 Work will continue towards producing a signet-mergeable integration branch of bitcoin-core containing Simplicity. Key tasks include:
 

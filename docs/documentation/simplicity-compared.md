@@ -1,6 +1,4 @@
-
 Simplicity was designed from the ground up to address the limitations of existing blockchain scripting languages while maintaining the security guarantees that make Bitcoin reliable.
-
 
 | | **Bitcoin Script** | **Miniscript** | **Solidity** | **Simplicity** | **Comments** |
 |---|---|---|---|---|---|

@@ -29,6 +29,7 @@ The development of a Jet follows a **rigorous, multi-stage pipeline** to ensure 
 ---
 
 ### 1. Prototyping with Simplicity Combinators
+
 The initial phase involves building the desired functionality using only the fundamental building blocks (combinators) of Simplicity.
 
 This serves as a high-level, human-readable blueprint.
@@ -68,5 +69,5 @@ This proves that the optimized C implementation is semantically identical to the
 Once fully verified and benchmarked, the Jet is integrated into the **core Simplicity library** and considered for standardization, making it available for general use in Liquid and Bitcoin scripts.
 
 ### 8. Deployment
-Newer Jets are deployed to a Bitcoin **testnet** for real-world testing.
 
+Newer Jets are deployed to a Bitcoin **testnet** for real-world testing.

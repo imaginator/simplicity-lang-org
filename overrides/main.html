@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if page.is_homepage %}
+<section class="hero">
+    <div class="hero-text">
+        <h1>{{ config.site_name }}</h1>
+        <p>{{ config.site_description }}</p>
+        <a href="{{ 'getting-started/' | url }}" class="md-button md-button--primary">
+            Get Started
+        </a>
+        <a href="{{ 'documentation/' | url }}" class="md-button">
+            Read the Docs
+        </a>
+    </div>
+</section>
+{% endif %}
+
+{# Render the page content #}
+{{ super() }}
+{% endblock %}

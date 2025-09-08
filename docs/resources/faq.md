@@ -1,5 +1,6 @@
+# Simplicity FAQ
 
-### Simplicity is so simple it fits on a [T-shirt](https://store.blockstream.com/products/simplicity-t-shirt). Does that mean it's as limited as Bitcoin Script?
+## Simplicity is so simple it fits on a [T-shirt](https://store.blockstream.com/products/simplicity-t-shirt). Does that mean it's as limited as Bitcoin Script?
 
 No, the "simplicity" refers to its foundational design and formal semantics, not its expressiveness.
 
@@ -7,7 +8,7 @@ No, the "simplicity" refers to its foundational design and formal semantics, not
 
 - Complex off-chain (even Turing-complete) computations can be verified on-chain with Simplicity.
 
-### Is Simplicity Turing-complete like EVM?
+## Is Simplicity Turing-complete like EVM?
 
 No, and that’s a feature!
 
@@ -17,7 +18,7 @@ No, and that’s a feature!
 
 - **Enhanced Verifiability:** Programs are analyzable, enabling formal reasoning.
 
-### How does Simplicity handle state? Does it have global state like Ethereum?
+## How does Simplicity handle state? Does it have global state like Ethereum?
 
 Simplicity has no global state. It is a purely functional language: each program is just a function mapping inputs → outputs.
 
@@ -31,7 +32,7 @@ Contracts run within the Bitcoin UTXO model:
 
 This design avoids shared mutable state (as in Ethereum). Instead, every transition is localized: a UTXO is consumed, and the updated state is re-committed into the new UTXO.
 
-### How do I prove my Simplicity contract is correct?
+## How do I prove my Simplicity contract is correct?
 
 Formal verification happens in [Coq/Rocq](https://rocq-prover.org/), not directly in Simplicity.
 
@@ -43,7 +44,7 @@ Process:
 
   3. Proofs give guarantees before deployment.
 
-### Simplicity is low-level. Do I write contracts directly in it?
+## Simplicity is low-level. Do I write contracts directly in it?
 
 Not usually. There are higher-level options:
 
@@ -55,23 +56,23 @@ Not usually. There are higher-level options:
 
 The future vision is that there are multiple high-level languages which all compile down to Simplicity + proofs.
 
-### What are Jets, and how do they make programs efficient?
+## What are Jets, and how do they make programs efficient?
 
-A [Simplicity jet](documentation/jets-explained.md) is a pre-defined, optimized function that replaces an equivalent Simplicity expression to speed up execution without changing its meaning.
+A [Simplicity jet](../documentation/jets-explained.md) is a pre-defined, optimized function that replaces an equivalent Simplicity expression to speed up execution without changing its meaning.
 
 Benefits:
 
-  - Programs remain formally verifiable.
+- Programs remain formally verifiable.
 
-  - Heavy operations run in optimized C instead of interpreted combinators.
+- Heavy operations run in optimized C instead of interpreted combinators.
 
-  - Keeps execution fast, compact, and analyzable.
+- Keeps execution fast, compact, and analyzable.
 
-### How does Simplicity exist alongside Bitcoin script?
+## How does Simplicity exist alongside Bitcoin script?
 
 With Taproot’s versioned leaves, a single Taproot output can include both standard Script/Miniscript leaves and a Simplicity leaf. This allows mixing policies: simple paths can remain in Script while advanced paths use Simplicity, preserving flexibility and privacy under one Taptree.
 
-### How do I track the value of a Simplicity contract with partial payouts when different strike prices are being matched?
+## How do I track the value of a Simplicity contract with partial payouts when different strike prices are being matched?
 
 Simplicity contracts operate on UTXO-committed state. Each contract output carries forward a table of strikes together with their remaining notionals.
 

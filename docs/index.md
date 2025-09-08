@@ -1,13 +1,11 @@
 ---
-title: "A typed functional smart contract language for bitcoin-like blockchains."
-description: "A typed, combinator-based, functional smart contract language without loops or recursion, designed for Bitcoin-like blockchains."
 hide:
   - navigation
   - toc
   - title
 ---
 
-Simplicity is a typed, combinator-based, functional smart contract language without loops or recursion, designed for Bitcoin-like blockchains.
+# A typed, combinator-based, functional smart contract language without loops or recursion, designed for Bitcoin-like blockchains."
 
 ## Key Features
 
