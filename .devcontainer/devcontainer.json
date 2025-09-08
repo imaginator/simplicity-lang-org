@@ -1,18 +1,39 @@
+// .devcontainer/devcontainer.json
 {
-	"name": "Material for MkDocs - VS Code dev container",
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
-	"features": {
-		"ghcr.io/devcontainers/features/python:1": {
-			"installTools": true,
-			"version": "3.11"
-	  }
-	},
-	"postCreateCommand": "pip install -e . && pip install mkdocs-minify-plugin mkdocs-redirects && npm install && npm run build",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"Simplicity.simplicityhl"
-			]
-		}
-	}
+  "name": "MkDocs (Material)",
+  "image": "squidfunk/mkdocs-material:latest",
+  "forwardPorts": ,
+  "portsAttributes": {
+    "8000": { "label": "MkDocs Preview", "onAutoForward": "openBrowserOnce" }
+  },
+  "postStartCommand": "mkdocs serve -a 0.0.0.0:8000",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "redhat.vscode-yaml",
+        "DavidAnson.vscode-markdownlint",
+        "rvest.vs-code-prettier-eslint",
+        "Simplicity.simplicityhl",
+      ],
+      "settings": {
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": [
+      "mkdocs.yml",
+      "file:///workspaces/simplicity-lang-org/mkdocs.yml"
+    ],
+    "https://json.schemastore.org/github-workflow.json": "/.github/workflows/*"
+  },
+        "yaml.customTags": [
+          "!ENV scalar",
+          "!ENV sequence",
+          "!relative scalar",
+          "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+          "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+          "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+          "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
+        ]
+      }
+    }
+  }
 }
