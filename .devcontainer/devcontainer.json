@@ -6,16 +6,10 @@
   "portsAttributes": {
     "8000": { "label": "MkDocs Preview", "onAutoForward": "openBrowserOnce" }
   },
+  "postCreateCommand": "pip install -r requirements.txt",
   "postStartCommand": "mkdocs serve -a 0.0.0.0:8000",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "redhat.vscode-yaml",
-        "DavidAnson.vscode-markdownlint",
-        "rvest.vs-code-prettier-eslint",
-        "Simplicity.simplicityhl",
-      ],
       "settings": {
   "yaml.schemas": {
     "https://squidfunk.github.io/mkdocs-material/schema.json": [

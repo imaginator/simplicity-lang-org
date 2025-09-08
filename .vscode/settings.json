@@ -25,13 +25,6 @@
   "search.followSymlinks": false,
   "stylelint.validate": ["css", "scss"],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "extensions": [
-        "ms-python.python",
-        "redhat.vscode-yaml",
-        "DavidAnson.vscode-markdownlint",
-        "rvest.vs-code-prettier-eslint",
-        "Simplicity.simplicityhl",
-      ],
   "yaml.schemas": {
     "https://squidfunk.github.io/mkdocs-material/schema.json": [
       "mkdocs.yml",
