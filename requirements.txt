@@ -21,18 +21,21 @@
 # Requirements for core
 jinja2~=3.1
 markdown~=3.2
-mkdocs~=1.6
+mkdocs-git-authors-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-git-committers-plugin-2
 mkdocs-material-extensions~=1.3
-pygments~=2.16
 mkdocs-material==9.6.18
+mkdocs~=1.6
+pygments~=2.16
 pymdown-extensions~=10.2
 
 # Requirements for plugins
 babel~=2.10
+backrefs~=5.7.post1
 colorama~=0.4
 mergedeep~=1.3
 paginate~=0.5
-backrefs~=5.7.post1
 requests~=2.26
 
 # Temporarily pin click until this is resolved in MkDocs, see

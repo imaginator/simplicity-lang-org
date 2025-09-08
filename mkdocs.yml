@@ -1,7 +1,10 @@
 site_name: Simplicity
 site_url: https://new-docs.simplicity-lang.org
 plugins:
-  - search
+  - git-revision-date-localized:
+  - git-committers:
+      repository: BlockstreamResearch/simplicity-docs
+      branch: main
 theme:
   name: material
   favicon: assets/logo-symbol.svg
