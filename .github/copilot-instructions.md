@@ -78,4 +78,4 @@ Don’t:
 
 - Don’t hype or exaggerate
 - Don’t over-simplify technical concepts - respect the audience’s intelligence.
-- Don’t use generic marketing fluff 
+- Don’t use generic marketing fluff or managemenet-speak
