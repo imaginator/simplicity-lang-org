@@ -7,7 +7,6 @@ plugins:
   - git-committers:
       repository: BlockstreamResearch/simplicity-lang-org
       branch: main
-      token: !!env:GIT_COMMITTERS_TOKEN
 theme:
   name: material
   custom_dir: overrides
