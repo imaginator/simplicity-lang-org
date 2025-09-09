@@ -64,3 +64,18 @@ python -m mkdocs build
 - `:material-tools:` for command-line tools
 - `:material-microscope:` for formal verification (Coq)
 
+## Writing Style
+
+Do:
+
+- Be precise
+- Be direct and confident
+- Highlight sovereignty
+- Use active voice
+- Balance technical detail with clarity
+
+Don’t:
+
+- Don’t hype or exaggerate
+- Don’t over-simplify technical concepts - respect the audience’s intelligence.
+- Don’t use generic marketing fluff 
