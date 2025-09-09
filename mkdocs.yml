@@ -4,9 +4,10 @@ site_description: A typed, functional smart contract language for Bitcoin-like b
 plugins:
   - search:
   - git-revision-date-localized:
-  - git-committers:
-      repository: BlockstreamResearch/simplicity-lang-org
-      branch: main
+  # add this back in when we have more authors
+  # - git-committers:
+  #     repository: BlockstreamResearch/simplicity-lang-org
+  #     branch: main
 theme:
   name: material
   custom_dir: overrides

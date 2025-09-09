@@ -41,14 +41,6 @@ Contracts are optimized for on-chain execution, keeping size and operational ove
 
 Simplicity can handle multi-party agreements, such as escrow-free marketplaces or collaborative finance operations. Parties can interact securely without giving up control to a central authority.
 
-## Getting Started
-
-For Bitcoiners
-Simplicity for Solidity Devs
-Simplicity for Finance
-Simplicity for Formal Verificationers…
-Simplicity for Functional Programers..
-
 ## Example
 
 A basic pay-to-pubkey SimplicityHL program looks like this:
