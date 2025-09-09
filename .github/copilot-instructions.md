@@ -14,7 +14,7 @@ This is the documentation site for Simplicity, a typed functional smart contract
 ### Deployment Pipeline
 - **Build command**: `python -m mkdocs build` (note: always use `python -m` prefix for reliability)
 - **Output**: Static site generated to `site/` directory
-- **Hosting**: Netlify with configuration in `netlify.toml`
+- **Hosting**: Github Pages with build in `.github/workflows/ci.yml`
 - **Dev environment**: VS Code dev container with Python 3.11 and all dependencies
 
 ## Development Workflows
