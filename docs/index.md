@@ -5,8 +5,6 @@ hide:
   - title
 ---
 
-# A typed, combinator-based, functional smart contract language without loops or recursion, designed for Bitcoin-like blockchains."
-
 ## Key Features
 
 ### Expressive Smart Contracts
