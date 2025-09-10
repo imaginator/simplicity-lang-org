@@ -1,0 +1,58 @@
+/* Hide the GitHub repository link/icon in the header */
+.md-header__source {
+    display: none !important;
+}
+
+.md-source {
+    display: none !important;
+}
+
+/* Hero section styles */
+.hero {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero .md-button {
+    margin: 0 0.5rem;
+}
+
+/* Quote section styles */
+.quotes {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 2rem;
+}
+
+.quote-card {
+    border-left: 4px solid var(--md-primary-fg-color);
+    padding: 1rem;
+    background-color: var(--md-code-bg-color);
+    border-radius: 4px;
+}
+
+.quote-card blockquote {
+    margin: 0;
+    font-style: italic;
+}
+
+.quote-card footer {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: right;
+}
