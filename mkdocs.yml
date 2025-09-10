@@ -124,7 +124,6 @@ nav:
       - Rust: getting-started/rust.md
       - Haskell: getting-started/haskell.md
   - Documentation:
-      - documentation/index.md
       - How Simplicity Works: documentation/how-simplicity-works.md
       - Jets Explained: documentation/jets-explained.md
       - Simplicity for EVM developers: documentation/simplicity-for-evm-developers.md
