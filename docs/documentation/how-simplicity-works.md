@@ -5,7 +5,7 @@ Simplicity is a typed, combinator-based, functional smart contract language with
 Frequently used operations are implemented as jets. Jets are predefined, highly efficient building blocks, allowing contracts to execute complex conditional payments, options, and multi-party transactions with predictable resource usage and no reliance on a central authority.
 
 Let's delve deeper into how Simplicity works within the Bitcoin ecosystem:
-
+ 
 ## SimplicityHL Compilation and Simplicity Bytecode
 
 SimplicityHL is a developer-friendly front-end language, engineered to simplify the process of writing smart contracts by offering a syntax akin to the Rust programming language. It effectively abstracts away the intricate, low-level functional programming details inherent in raw Simplicity. The SimplicityHL Compiler is the dedicated toolchain responsible for translating SimplicityHL code into its foundational Simplicity representation. This approach is crucial because, while Simplicity offers profound mathematical expressiveness, its low-level nature means that practically, developers will write in higher-level languages that then compile down to Simplicity, complete with formal proofs of their correct operation.
