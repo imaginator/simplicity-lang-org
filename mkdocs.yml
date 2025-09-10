@@ -1,5 +1,5 @@
 site_name: Simplicity
-site_url: https://docs.simplicity-lang.org
+site_url: https://blockstreamresearch.github.io
 site_description: A typed, functional smart contract language for Bitcoin-like blockchains. # Add this line
 plugins:
   - search:
